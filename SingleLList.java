@@ -1,9 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package SpellCheck;
+
 
 import java.util.ArrayList;
 
@@ -31,16 +26,16 @@ public class SingleLList<T> {
     }
 
     /**
-    Adds a node at the start of the list with the specified data.
-    The added node will be the first node in the list.
+     * Adds a node at the start of the list with the specified data.
+     * The added node will be the first node in the list.
     */
     public void addToStart(T key) {
         head = new Node(key, head);
     }
 
     /**
-    Removes the head node and returns true if the list contains at
-    least one node. Returns false if the list is empty.
+     * Removes the head node and returns true if the list contains at
+     * least one node. Returns false if the list is empty.
     */
     public boolean deleteHeadNode( ) {
         if (head != null) {

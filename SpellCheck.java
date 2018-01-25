@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package SpellCheck;
 
 
 import java.io.BufferedReader;
@@ -17,7 +11,6 @@ import java.util.ArrayList;
 
 
 /**
- *
  * @author Ryan Boehm
  */
 public class SpellCheck {
@@ -50,7 +43,7 @@ public class SpellCheck {
         // tries to create new file in the system
         try {
             // create new file
-            newFile = new File("../" + fileName);
+            newFile = new File(fileName);
 
             if (newFile.exists()) {
                 newFile.delete();
@@ -81,7 +74,7 @@ public class SpellCheck {
         
         try {
             // read the file
-            BufferedReader br = new BufferedReader(new FileReader("../" + fileName)); 
+            BufferedReader br = new BufferedReader(new FileReader(fileName)); 
             while ((line = br.readLine())!= null) { 
                line += " ";
                fileContents.append(line); //append all file contents into one string
@@ -109,7 +102,7 @@ public class SpellCheck {
     public static void fileWrite( ArrayList<String> words, String outFileName) {
         
         try {
-           BufferedWriter writer = new BufferedWriter(new FileWriter("../" + outFileName));
+           BufferedWriter writer = new BufferedWriter(new FileWriter(outFileName));
            
             // Write each word in the array onto a separate line.
             for (String word : words) {
@@ -283,7 +276,7 @@ public class SpellCheck {
     */
     public static ArrayList checkSpellingFix(ArrayList wordList, WordList wordHashTable) {
         ArrayList correctedWordList = new ArrayList(); // to hold all marked and unmarked words
-        String word; // to hold each word in list
+        String word;
         String prevWord;
         String nextWord;
         
@@ -499,7 +492,7 @@ public class SpellCheck {
         
         try {
             // read the file
-            BufferedReader br = new BufferedReader(new FileReader("../" + fileName)); 
+            BufferedReader br = new BufferedReader(new FileReader(fileName)); 
             
             // insert each word into the hash table
             while ((line = br.readLine()) != null) { 

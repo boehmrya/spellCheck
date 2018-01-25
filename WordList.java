@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package SpellCheck;
 
 
 import java.io.BufferedWriter;
@@ -13,11 +7,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 
-
-/******************************************************************************
- *  A symbol table implemented with a separate chaining hash table.
- ******************************************************************************/
-
+/*
+* a separate chaining hash table.
+*/
 public class WordList<Key> {
 
     private static int n;       // number of key-value pairs
